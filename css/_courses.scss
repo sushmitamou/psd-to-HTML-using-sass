@@ -1,0 +1,25 @@
+/* courses */
+#courses{
+    padding: 100px 0;
+
+    .course-row{
+        @include flexbox(center);
+    }
+    .course-right-col{
+        flex-basis: 50%;
+    }
+    .course-right-col img{
+        width: 100%;
+    }
+    .course-left-col{
+        flex-basis: 50%;
+    }
+    .course-text{
+        width: 350px;
+    }
+    .course-text button{
+        margin: 30px 0;
+    }
+}
+
+/* courses */

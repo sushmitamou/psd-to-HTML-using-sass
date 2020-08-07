@@ -1,0 +1,191 @@
+@import './variable-color';
+@import './header';
+@import './about';
+@import './features';
+@import './courses';
+@import './offer';
+@import './contact';
+@import './footer';
+
+
+
+@mixin flexbox($align-items) {
+    display: flex;
+    align-items: $align-items;
+    flex-wrap: wrap;
+}
+
+.justify{
+    @include flexbox();
+    justify-content: space-between;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+.container{
+    margin-right: 100px;
+    margin-left: 100px;
+}
+.square{
+    height: 12px;
+    width: 12px;
+    display: inline-block;
+    background: $themecolor;
+    margin: 15px 0;
+}
+.common-btn{
+    padding: 18px 40px;
+    background: transparent;
+    outline: none;
+    border: 2px solid $themecolor;
+    font-weight: bold;
+    cursor: pointer;
+}
+p{
+    font-size: 15px;
+    line-height: 18px;
+    color: $paragraphColor;
+}
+
+.line-1, .line-2, .line-3{
+    width: 15px;
+    height: 15px;
+    background: $themecolor;
+    display: inline-block;
+}
+.line-2{
+    width: 80px;
+    height: 1px;
+}
+.line-3{
+    width: 60px;
+    height: 1px;
+}
+.line{
+    line-height: 8px;
+}
+
+#menuBtn{
+    width: 50px;
+    position: fixed;
+    right: 65px;
+    top: 35px;
+    z-index: 2;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* social icons */
+.social-icons{
+    width: 50px;
+    position: fixed;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+.social-icons img{
+    display: block;
+    width: 20px;
+    margin: 0 auto 20px  ;
+    cursor: pointer;
+}
+/* social icons */
+
+
+
+
+@media only screen and (max-width: 770px){
+    .container{
+        margin-right: 50px;
+        margin-left: 50px;
+    }
+    #header{
+        background-image: none;
+
+        .logo{
+            margin-top: 27px;
+            width: 70px;
+        }
+        .header-text{
+            margin-top: 100px;
+        }
+        h1{
+            font-size: 25px;
+        }
+        #menuBtn{
+            width: 40px;
+            right: 50px;
+        }
+    }
+    
+    .common-btn{
+        padding: 10px 16px;
+    }
+    .social-icons img{
+        width: 14px;
+        margin: 15px auto;
+    }
+
+    #about, #offer{
+        .about-left-col, .about-right-col{
+            flex-basis: 100%;
+        }
+        .about-text{
+            margin:50px 50px 0;
+            display: inline-block;
+        }
+        .about-text h2{
+            font-size: 18px;
+        }
+    }
+   
+    #features{
+        .feature-col{
+            flex-basis: 100%;
+            margin-bottom: 20px;
+        }
+    }
+
+    #courses{
+        .course-left-col{
+            flex-basis: 100%;
+        }
+        .course-right-col{
+            flex-basis: 100%;
+            margin-top: 70px;
+        }
+    }
+
+    #contact{
+        .contact-left-col, .contact-right-col{
+            flex-basis: 100%;
+        }
+        .contact-right-col{
+            margin-top: 50px;
+        }
+    }
+    
+    #footer{
+        .footer-left-col, .footer-right-col{
+            flex-basis: 100%;
+        }
+        .link-title{
+            flex-basis: 50%;
+            margin-bottom: 30px;
+        }
+    }
+}
