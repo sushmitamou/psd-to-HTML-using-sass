@@ -1,4 +1,5 @@
 @import './variable-color';
+@import './common-style.scss';
 @import './header';
 @import './about';
 @import './features';
@@ -6,106 +7,13 @@
 @import './offer';
 @import './contact';
 @import './footer';
+@import './social.scss';
 
-
-
-@mixin flexbox($align-items) {
+@mixin flexbox($align-items: center) {
     display: flex;
     align-items: $align-items;
     flex-wrap: wrap;
 }
-
-.justify{
-    @include flexbox();
-    justify-content: space-between;
-}
-
-*{
-    margin: 0;
-    padding: 0;
-    font-family: sans-serif;
-}
-.container{
-    margin-right: 100px;
-    margin-left: 100px;
-}
-.square{
-    height: 12px;
-    width: 12px;
-    display: inline-block;
-    background: $themecolor;
-    margin: 15px 0;
-}
-.common-btn{
-    padding: 18px 40px;
-    background: transparent;
-    outline: none;
-    border: 2px solid $themecolor;
-    font-weight: bold;
-    cursor: pointer;
-}
-p{
-    font-size: 15px;
-    line-height: 18px;
-    color: $paragraphColor;
-}
-
-.line-1, .line-2, .line-3{
-    width: 15px;
-    height: 15px;
-    background: $themecolor;
-    display: inline-block;
-}
-.line-2{
-    width: 80px;
-    height: 1px;
-}
-.line-3{
-    width: 60px;
-    height: 1px;
-}
-.line{
-    line-height: 8px;
-}
-
-#menuBtn{
-    width: 50px;
-    position: fixed;
-    right: 65px;
-    top: 35px;
-    z-index: 2;
-    cursor: pointer;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-/* social icons */
-.social-icons{
-    width: 50px;
-    position: fixed;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
-    z-index: 1;
-}
-.social-icons img{
-    display: block;
-    width: 20px;
-    margin: 0 auto 20px  ;
-    cursor: pointer;
-}
-/* social icons */
-
-
 
 
 @media only screen and (max-width: 770px){
@@ -126,10 +34,10 @@ p{
         h1{
             font-size: 25px;
         }
-        #menuBtn{
-            width: 40px;
-            right: 50px;
-        }
+    }
+    #menuBtn{
+        width: 40px;
+        right: 50px;
     }
     
     .common-btn{
@@ -140,7 +48,7 @@ p{
         margin: 15px auto;
     }
 
-    #about, #offer{
+    #offer, #about{
         .about-left-col, .about-right-col{
             flex-basis: 100%;
         }

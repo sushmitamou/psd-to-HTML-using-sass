@@ -1,0 +1,66 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+.container{
+    margin-right: 100px;
+    margin-left: 100px;
+}
+.square{
+    height: 12px;
+    width: 12px;
+    display: inline-block;
+    background: $themecolor;
+    margin: 15px 0;
+}
+.common-btn{
+    padding: 18px 40px;
+    background: transparent;
+    outline: none;
+    border: 2px solid $themecolor;
+    font-weight: bold;
+    cursor: pointer;
+}
+p{
+    font-size: 15px;
+    line-height: 18px;
+    color: $paragraphColor;
+}
+
+.line-1, .line-2, .line-3{
+    width: 15px;
+    height: 15px;
+    background: $themecolor;
+    display: inline-block;
+}
+.line-2{
+    width: 80px;
+    height: 1px;
+}
+.line-3{
+    width: 60px;
+    height: 1px;
+}
+.line{
+    line-height: 8px;
+}
+
+#menuBtn{
+    width: 50px;
+    position: fixed;
+    right: 65px;
+    top: 35px;
+    z-index: 2;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 770px){
+    #menuBtn{
+        width: 40px;
+        right: 50px;
+    }
+    .common-btn{
+        padding: 10px 16px;
+    }
+}

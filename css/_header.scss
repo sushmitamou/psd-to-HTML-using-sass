@@ -20,3 +20,19 @@
         margin-bottom: 60px;
     }
 }
+
+
+@media only screen and (max-width: 770px){
+    background-image: none;
+
+    .logo{
+        margin-top: 27px;
+        width: 70px;
+    }
+    .header-text{
+        margin-top: 100px;
+    }
+    h1{
+        font-size: 25px;
+    }
+}

@@ -267,6 +267,7 @@ nav ul li a {
 
 /* courses */
 /* offer */
+
 #offer button {
   margin: 30px 0;
 }
@@ -472,6 +473,20 @@ nav ul li a {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
     margin-bottom: 20px;
+  }
+  #offer{
+    padding: 100px 0;
+    @include flexbox(center);
+  }
+  #offer .about-text {
+    margin-right: 50px;
+    margin-left: 50px;
+}
+  #offer .about-left-col{
+    flex-basis: 100%;
+  }
+  #offer .about-right-col{
+    flex-basis: 100%;
   }
   #courses .course-left-col {
     -ms-flex-preferred-size: 100%;
